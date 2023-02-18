@@ -1,0 +1,15 @@
+version: '3.9'
+
+volumes:
+  worker_data:
+
+services:
+  bot-server:
+    container_name: bot-server
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+#    command: "python server.py"
+    volumes:
+      - .:/data

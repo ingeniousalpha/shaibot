@@ -1,0 +1,5 @@
+import os
+
+BOT_API_KEY = os.getenv('BOT_API_KEY', "5870268600:AAHXqd1jRBllUWqHH1RA0wB5kZwPcm6hUNY")
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', "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")
+CHAT_ID = -770248259
