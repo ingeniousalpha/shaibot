@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = "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"
+API_KEY = ""
 headers = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"
@@ -21,7 +21,7 @@ def main():
         json=body
     )
 
-    print(response.json()['choices'][0]['text'])
+    print(response.json())
 
 
 if __name__ == "__main__":

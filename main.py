@@ -17,8 +17,8 @@ dp = Dispatcher(bot)
 # Communicating in Groups
 @dp.message_handler(lambda message: message.text.startswith('/bot'))
 async def call_by_command(msg: types.Message):
-    logging.info('from group')
-    logging.info("msg obj: ", msg)
+    print('from group')
+    print("msg obj: ", msg)
     # TODO save user to usersdb
     resp_text = ask_chatgpt(msg.text.removeprefix("/bot "))
     await msg.answer(resp_text)
@@ -27,8 +27,8 @@ async def call_by_command(msg: types.Message):
 # Communicating in Private
 @dp.message_handler()
 async def call_by_direct(msg: types.Message):
-    logging.info('from private')
-    logging.info("msg obj: ", msg)
+    print('from private')
+    print("msg obj: ", msg)
     # TODO check if user in use>rsdb
     question_text = msg.text
     if msg.reply_to_message:
