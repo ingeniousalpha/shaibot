@@ -11,5 +11,7 @@ services:
       context: .
       dockerfile: Dockerfile
 #    command: "python server.py"
+    env_file:
+      - ./.env.dev
     volumes:
       - .:/data

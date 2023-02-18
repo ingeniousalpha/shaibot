@@ -1,8 +1,5 @@
 FROM python:3.9
 
-ENV BOT_API_KEY="5870268600:AAHXqd1jRBllUWqHH1RA0wB5kZwPcm6hUNY"
-ENV OPENAI_API_KEY="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"
-
 ENV TZ=Asia/Almaty
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
