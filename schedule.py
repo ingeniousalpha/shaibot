@@ -8,6 +8,7 @@ scheduler = AsyncIOScheduler(timezone="Asia/Almaty")
 scheduler.add_job(
     daily_task,
     trigger='cron',
-    minute=datetime.now().minute+1,
+    hour=9,
+    minute=0,
     start_date=datetime.now()
 )
